@@ -3,7 +3,7 @@ from datasets import load_dataset
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.linear_model import LogisticRegression
 from sklearn.model_selection import train_test_split
-from sklearn.metrics import classification_report
+from sklearn.metrics import classification_report, accuracy_score,  confusion_matrix
 import joblib
 import re
 import nltk
@@ -47,7 +47,10 @@ model.fit(X_train_vec, y_train)
 
 # Evaluate
 y_pred = model.predict(X_test_vec)
-print(classification_report(y_test, y_pred, target_names=["negative", "positive"]))
+
+print("Accuracy:", accuracy_score(y_test, y_pred))
+print("\nClassification Report:\n", classification_report(y_test, y_pred, target_names=["negative", "positive"]))
+print("\nConfusion Matrix:\n", confusion_matrix(y_test, y_pred))
 
 # Save model + vectorizer
 joblib.dump(model, "sentiment_model.joblib")
