@@ -12,25 +12,36 @@ _`amazon_polarity`_ Dataset is used to train model.
 ![screenshot1](screenshot/Screenshot_1.png)
 ![screenshot2](screenshot/Screenshot_2.png)
 ## Project Setup and Run:
-1. Install Dependencies:  
+1. Clone the repo:  
+   ```sh
+    git clone https://github.com/arif123/ml-course-final-project
+   ```
+   
+2. Navigate to project directory:
+   ```sh
+   cd ml-course-final-project
+   ```
+
+3. Install Dependencies:  
    ```sh
     pip install -r requirements.txt
    ```
 
-2. Download stop word if nltk_data folder is empty.  
+4. Download stop word if nltk_data folder is empty.  
    ```sh
    python download_nltk_stop_words.py
    ```
    
-3. Train the Sentiment Model This creates two files:sentiment_model.joblib and tfidf_vectorizer.joblib  
+5. Train the Sentiment Model This creates two files:sentiment_model.joblib and tfidf_vectorizer.joblib  
    ```sh
    python train_model.py
    ```
 
-4. Run the App  
+6. Run the App  
    ```sh
    python app.py
    ```
+
 
 
 
