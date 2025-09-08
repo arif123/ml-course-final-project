@@ -42,6 +42,11 @@ _`amazon_polarity`_ Dataset is used to train model.
    python app.py
    ```
 
+    Launches a Gradio web interface.  
+    Access it via the URL printed in the console (e.g., http://127.0.0.1:7860).  
+    Enter product review text and get the predicted sentiment and confidence scores.  
+
+
 
 
 
